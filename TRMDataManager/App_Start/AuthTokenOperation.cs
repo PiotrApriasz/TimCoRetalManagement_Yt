@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Http.Description;
 using Swashbuckle.Swagger;
 
+//Solution from https://stackoverflow.com/questions/51117655/how-to-use-swagger-in-asp-net-webapi-2-0-with-token-based-authentication
+
 namespace TRMDataManager.App_Start
 {
     public class AuthTokenOperation : IDocumentFilter
