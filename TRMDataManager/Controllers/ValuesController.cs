@@ -12,13 +12,12 @@ namespace TRMDataManager.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IHttpActionResult Get()
+        public IEnumerable<string> Get()
         {
             //Download user id to let us know how had been logged
             string userId = RequestContext.Principal.Identity.GetUserId();
 
-            //This implementation gives more control over result list
-            return  Ok(new string[] { "value1", "value2", userId });
+            return new string[] { "value1", "value2", userId };
         }
 
         // GET api/values/5
