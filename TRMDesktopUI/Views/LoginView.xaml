@@ -38,7 +38,7 @@
         <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin="0 0 0 40" />
 
         <!-- Login row -->
-        <Button Grid.Row="3" Grid.Column="2" x:Name="LoginButton" FontFamily="Century Gothic"
+        <Button Grid.Row="3" Grid.Column="2" x:Name="LogIn" FontFamily="Century Gothic"
                 HorizontalAlignment="Left" Padding="27 5" RenderTransformOrigin="0.67,0.527" Width="133">
             Log In
         </Button>
