@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
+using TRMDesktopUI.Helpers;
 
 //Fix to passwordBox https://stackoverflow.com/questions/30631522/caliburn-micro-support-for-passwordbox
 
@@ -14,6 +15,12 @@ namespace TRMDesktopUI.ViewModels
     {
         private string _userName;
         private string _password;
+        private IAPIHelper _apiHelper;
+
+        public LoginViewModel(IAPIHelper apiHelper)
+        {
+            _apiHelper = apiHelper;
+        }
 
         public string UserName
         {
@@ -43,9 +50,16 @@ namespace TRMDesktopUI.ViewModels
         /// <returns></returns>
         public bool CanLogIn => UserName?.Length > 0 && Password?.Length > 0;
 
-        public void LogIn()
+        public async Task LogIn()
         {
-            MessageBox.Show("You logged", "TimCo Retail Manager");
+            try
+            {
+                var result = await _apiHelper.Authenticate(UserName, Password);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
