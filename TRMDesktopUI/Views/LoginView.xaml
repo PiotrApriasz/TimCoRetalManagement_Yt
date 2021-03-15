@@ -20,31 +20,41 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0 20 0 60"
-                   HorizontalAlignment="Center" FontSize="48" FontFamily="Century Gothic">
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+                   Margin="0 20 0 60"
+                   HorizontalAlignment="Center" FontSize="48" 
+                   FontFamily="Century Gothic">
             TimCo Retail Manager
         </TextBlock>
 
         <!-- Username row -->
-        <TextBlock Grid.Row="1" Grid.Column="1" FontFamily="Century Gothic" Margin="0 0 0 40" >
+        <TextBlock Grid.Row="1" Grid.Column="1" FontFamily="Century Gothic" 
+                   Margin="0 0 0 40">
             Username:
         </TextBlock>
-        <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" MinWidth="290" FontFamily="Century Gothic" Margin="0 0 0 40" />
+        <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" 
+                 MinWidth="290" FontFamily="Century Gothic" 
+                 Margin="0 0 0 40" />
 
         <!-- Password row -->
-        <TextBlock Grid.Row="2" Grid.Column="1" FontFamily="Century Gothic" Margin="0 0 0 40" >
+        <TextBlock Grid.Row="2" Grid.Column="1" FontFamily="Century Gothic" 
+                   Margin="0 0 0 40" >
             Password:
         </TextBlock>
-        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="200" Margin="0 0 0 40" />
+        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="200" 
+                     Margin="0 0 0 40" />
 
         <!-- Login row -->
-        <Button Grid.Row="3" Grid.Column="2" x:Name="LogIn" FontFamily="Century Gothic"
-                HorizontalAlignment="Left" Padding="27 5" RenderTransformOrigin="0.67,0.527" Width="133">
+        <Button Grid.Row="3" Grid.Column="2" x:Name="LogIn" 
+                FontFamily="Century Gothic"
+                HorizontalAlignment="Left" Padding="27 5" 
+                RenderTransformOrigin="0.67,0.527" Width="133">
             Log In
         </Button>
 
         <!-- Register row -->
-        <Button Grid.Row="3" Grid.Column="2" x:Name="RegisterButton" FontFamily="Century Gothic"
+        <Button Grid.Row="3" Grid.Column="2" x:Name="RegisterButton" 
+                FontFamily="Century Gothic"
                 HorizontalAlignment="Right" Padding="20 5" >
             Register
         </Button>
