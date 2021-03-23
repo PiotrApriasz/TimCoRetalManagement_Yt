@@ -60,9 +60,10 @@ namespace TRMDesktopUI.ViewModels
             get => _errorMessage;
             set
             {
+                _errorMessage = value;
                 NotifyOfPropertyChange(() => IsErrorVisible);
                 NotifyOfPropertyChange(() => ErrorMessage);
-                _errorMessage = value;
+                
             }
         }
 
@@ -76,6 +77,7 @@ namespace TRMDesktopUI.ViewModels
         {
             try
             {
+                ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
             }
             catch (Exception e)

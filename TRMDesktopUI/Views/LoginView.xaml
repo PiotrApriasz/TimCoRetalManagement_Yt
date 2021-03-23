@@ -33,7 +33,7 @@
             Username:
         </TextBlock>
         <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" 
-                 MinWidth="290" FontFamily="Century Gothic" 
+                 MinWidth="350" FontFamily="Century Gothic" 
                  Margin="0 0 0 40" />
 
         <!-- Password row -->
@@ -41,7 +41,7 @@
                    Margin="0 0 0 40" >
             Password:
         </TextBlock>
-        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="200" 
+        <PasswordBox x:Name="Password" Grid.Row="2" Grid.Column="2" MinWidth="350" 
                      Margin="0 0 0 40" />
 
         <!-- Login row -->
