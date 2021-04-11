@@ -45,5 +45,24 @@ namespace TRMDataManager.Library
                 return rows;
             }
         }
+
+        /// <summary>
+        /// Save data to the database
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="storeProcedure"></param>
+        /// <param name="parameters"></param>
+        /// <param name="connectionStringName"></param>
+        public void SaveData<T>(string storeProcedure, T parameters, string connectionStringName)
+        {
+            string connectionString = GetConnectionString(connectionStringName);
+
+            //Makes connection to database
+            using (IDbConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Execute(storeProcedure, parameters,
+                    commandType: CommandType.StoredProcedure);
+            }
+        }
     }
 }
