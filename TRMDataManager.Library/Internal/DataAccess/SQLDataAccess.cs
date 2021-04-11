@@ -5,9 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
-namespace TRMDataManager.Library
+namespace TRMDataManager.Library.Internal.DataAccess
 {
-    public class SQLDataAccess
+    //This is internal because we don't want to use this class in other projects in solution
+    internal class SQLDataAccess
     {
         /// <summary>
         /// Get connection string based on matching name
