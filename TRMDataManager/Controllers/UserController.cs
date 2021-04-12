@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using TRMDataManager.Library.DataAccess;
 using TRMDataManager.Library.Models;
 
 namespace TRMDataManager.Controllers
 {
-    [System.Web.Mvc.Authorize]
+    [Authorize]
     public class UserController : ApiController
     {
         public List<UserModel> GetById()

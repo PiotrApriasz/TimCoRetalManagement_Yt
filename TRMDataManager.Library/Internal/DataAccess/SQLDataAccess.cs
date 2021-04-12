@@ -27,11 +27,11 @@ namespace TRMDataManager.Library.Internal.DataAccess
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="U"></typeparam>
-        /// <param name="storeProcedure"></param>
+        /// <param name="storedProcedure"></param>
         /// <param name="parameters"></param>
         /// <param name="connectionStringName"></param>
         /// <returns></returns>
-        public List<T> LoadData<T, U>(string storeProcedure, U parameters, string connectionStringName)
+        public List<T> LoadData<T, U>(string storedProcedure, U parameters, string connectionStringName)
         {
             string connectionString = GetConnectionString(connectionStringName);
 
@@ -39,7 +39,7 @@ namespace TRMDataManager.Library.Internal.DataAccess
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
                 //Returns set of rows
-                List<T> rows = connection.Query<T>(storeProcedure, parameters,
+                List<T> rows = connection.Query<T>(storedProcedure, parameters,
                         commandType: CommandType.StoredProcedure)
                         .ToList();
 
